@@ -49,7 +49,7 @@ xButton.Parent = frame
 xButton.MouseButton1Click:Connect(function()
    animegui:Destroy()
    wait()
-loadstring(game:HttpGet("later"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GazerHA/Gazer-Sheets-Library/main/MainGui.LUA"))()
     end)
 
 
