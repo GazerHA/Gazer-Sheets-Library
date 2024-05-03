@@ -1,0 +1,73 @@
+local http = game:GetService("HttpService")
+
+-- Create the animegui
+local animegui = Instance.new("ScreenGui")
+animegui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Define sizes
+local frameSize = UDim2.new(0, 200, 0, 100)
+local outerFrameSize = UDim2.new(0, 240, 0, 140)
+local scrollingFrameSize = UDim2.new(1, -10, 1, -30) -- slightly smaller than the frame
+
+-- Create the main frame
+local frame = Instance.new("Frame")
+frame.Size = frameSize
+frame.Position = UDim2.new(0.5, -frameSize.X.Offset / 2, 0.5, -frameSize.Y.Offset / 2)
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BorderSizePixel = 2
+frame.Parent = animegui
+
+-- Create the scrolling frame
+local scrollingFrame = Instance.new("ScrollingFrame")
+scrollingFrame.Size = scrollingFrameSize
+scrollingFrame.Position = UDim2.new(0, 5, 0, 30) -- adjust position to fit inside the frame
+scrollingFrame.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+scrollingFrame.BorderSizePixel = 0
+scrollingFrame.ScrollBarThickness = 10
+scrollingFrame.Parent = frame
+
+-- Create a label next to the X button
+local label = Instance.new("TextLabel")
+label.Text = "Sheets | Anime Style"
+label.Size = UDim2.new(0, 100, 0, 20)
+label.Position = UDim2.new(0, 30, 0, 5)
+label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+label.BorderSizePixel = 0
+label.Parent = frame
+
+-- Create the X button
+local xButton = Instance.new("TextButton")
+xButton.Text = "<"
+xButton.Size = UDim2.new(0, 20, 0, 20)
+xButton.Position = UDim2.new(0, 5, 0, 5)
+xButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+xButton.BorderSizePixel = 0
+xButton.Parent = frame
+
+-- Function to copy content to clipboard
+-- Add functionality to the X button
+xButton.MouseButton1Click:Connect(function()
+   animegui:Destroy()
+   wait()
+loadstring(game:HttpGet("later"))()
+    end)
+
+
+-- Function to create buttons
+local function createButton(name, copy)
+wait (0.1)
+    local Button = Instance.new("TextButton")
+    Button.Text = name
+    Button.Size = UDim2.new(1, -10, 0, 30)
+    Button.Position = UDim2.new(0, 5, 0, (#scrollingFrame:GetChildren() * 35) + 5)
+    Button.BackgroundColor3 = Color3.fromRGB(100, 100, 255)
+    Button.Parent = scrollingFrame
+    Button.MouseButton1Click:Connect(function()
+    setclipboard(tostring(copy))
+end
+    )
+    return Button
+end
+
+
+createButton("Young Girl A", "[!%*TOis][i!*TO][i!*TO][i!*TO] [i!*TO][i!*TO][i!*TO][ti!*TO] s s s [P158tus][18tuP][18tuP][18tuP] [18tuoP][18tuoP][18tuoP][18tuoP] as s s [Y4to] [Y4to] [%Y8qto] 4[Yto]4[Yto]4[Yto][%Y8qto] [Y4to] [@WTi] [@WTi] [^(WT5i] [@WTi] [t%WY]--[!*DH] [*DH] [qtWDH] [*Dh] [!*DH] [*DJ][DH][Wqt] * [!*DH] [*DH] [qtWDH] [*Dh] [!*DH] [*DJ][DH][Wqt] * [P18h] [P8h] [EP0wh] [8PD] [P18h] [8fPH][Ph][0wE] 8 [4gH] [4gH] [8qg%H] [4gh] [4gH] [4gJ][gH][%8q] 4 [!*DH] [*DH] [qtWDH] [*Dh] [!*DH] [*DJ][DH][Wqt] * [!*DH] [*DH] [qtWDH] [*Dh] [!*DH] [*DJ][DH][Wqt] * [P18h] [P8h] [EP0wh] [8PD] [P18h] [8fPH][Ph][0wE] 8 [4gH] [4gH] [8qg%H] [4gh] [4gH] [4gJ][gH][%8q] 4 [!TOis][*TOis][!TOis][*TOis]HHHHHD H JH [!TOis][*TOis][!TOis][*TOis]HHHHHD H JH [1tuoP][8tuoP][1tuoP][8tuoP]HHHHHD H JH [4toYP][4toYP][4toYP][4toYP]HHHJlL l JH [!%TOis][*TOis][!%TOis][*TOis]HHHHHD HHJH [!%TOis][*TOis][!%TOis][*TOis]HHHHHD HHJH [15tuoP][8tuoP][15tuoP][8tuoP]HHHHHD H JH [14toYP][4toYP][14toYP][4toYP]HHHJlL l JH [!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[15tuoP][8tuoP][15tuoP][8tuoP][15H]HHH[8H]D[15]H8J[15H]8[14toYP][4toYP][14toYP][4toYP][14H]HHJ[4l]L[14]l4J[14H]4[!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[15tuoP][8tuoP][15tuoP][8tuoP][15H]HHH[8H]D[15]H8J[15H]8[14toYP][4toYP][14toYP][4toYP]HHHJlL l JH [g!SH] [qg*SH] [qgWSH] [tgWSH] [g!SH] [qg*SH] [qgWSDH] [tgWSH] [g!SH] [qg*SH] [qgWSDH] [tgWSH] [g!SH] [qg*SH] [qgWSHJ] [tgWSH] [1sfhl] [80sfh] [0wfhL] [Ewsfh] [1sfhl] [80sfh] [0wsfhJ] [Ewsfh] [4shDH] [WDqsh] [WDtsh] [YDtsh] [4hDZ] [WDqsh] [WDtsh] [YDtsh] [g!SH] [qg*SH] [qgWSH] [tgWSH] [g!HZ] [qg*SH] [qgWSH] [tgWSH] [g!SH] [qg*SH] [qgWSH] [tgWSH] [g!SH] [qg*SH] [qgWSDH] [tgWSH] [1sfhl] [80sfh] [0wfhL] [Ewsfh] [1sfhl] [80sfh] [0wsfhJ] [Ewsfh] [4shDH] [%D4sh] [8sh%DH] [D8qsh] [qetshDH]rtyuiopasdfghjklzxcv-[lV]-[!*Sl] * [Wqt] * [!*SJ] * [qtlWZ] * [P18fl] 8 [0wE] 8 [18fJ] 8 [0wfEJZ] 8 [DH4sgl] 4 [%8q] 4 [4gJ] 4 [%D8ql] 4 [@DGJ] @ [$^*Sg] @ [%Sg] % [(QD8h] % [!*Dh][gH]*[Dh][qtgWH] [*Dh][gH][!*][Dh][g*H] [WDqth][gH]* [18gH][hJ]8[gH][0whEJ] [8gH][hJ][18][gH][8hJ] [0wgEH][hJ]8 [4hJ][Hl]4[hJ][%H8ql] [4hJ][Hl]4[hJ][H4l] [%8q] [4ig] [@gc] @ [$^*DZ] [@DZ] [%sl] % [8(QPJ] [%OH] [!*gl]S[gl]S[*gl]S[gl]S[Wqtgl]S[gl]S[*gl]S[gl]S[!*SJ] * [qtlWZ] * [18fl]s[fl]s[8fl]s[fl]s[E0wfl]s[fl]s[8fl]s[fl]s[18fJ] 8 [0wfEJZ] 8 [4gl]s[gl]s[4gl]s[gl]s[%8qgl]s[gl]s[4gl]s[gl]s[4gJ] 4 [%D8ql] 4 [@PDGJ] @ [$^*Sg] @ [%Sg] % [(QD8h] % [!*Dh][gH]*[Dh][qtgWH] [*Dh][gH][!*][Dh][g*H] [WDqth][gH]* [18gH][hJ]8[gH][0whEJ] [8gH][hJ][18][gH][8hJ] [0wgEH][hJ]8 [4hJ][Hl]4[hJ][%H8ql] [4hJ][Hl]4[hJ][H4l] [%8q] [4ig] [@gc] @ [$^*DZ] [@DZ] [%sl] % [8(QPJ] [%OH] [!*sl] [Wqt] [!*sl] [Wqt] [@(PJ] [wET] [@(PJ] [wETDZ] [4qsl] [tWY] [4qsl] [tWY] [%PJ] [tWY] [%PJ] [tWYDZ] [!*sl] [Wqt] [!*sl] [Wqt] [@(ig] [ETwig] [@(ig] [ETwoh] [4qOH] [Wtioh] [18ig] [tiWYD] [4ig]-cxzlkjhgfdsapoiuytrewq [!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[15tuoP][8tuoP][15tuoP][8tuoP][15H]HHH[8H]D[15]H8J[15H]8[14toYP][4toYP][14toYP][4toYP][14H]HHJ[4l]L[14]l4J[14H]4[!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[!%TOis][*TOis][!%TOis][*TOis][!%H]HHH[*H]D[!%]H*J[!%H]*[15tuoP][8tuoP][15tuoP][8tuoP][15H]HHH[8H]D[15]H8J[15H]8[14toYP][4toYP][14toYP][4toYP][14H]HHJ[4l]L[14]l4J[14H]4[!TOis][*TOis][!TOis][*TOis][!H][*H][!H][*H][!H][*D]![*H]![*J][!H]*[!TOis][*TOis][!TOis][*TOis][!H][*H][!H][*H][!H][*D]![*H]![*J][!H]*[1tuoP][8tuoP][1tuoP][8tuoP][1H][8H][1H][8H][1H][8D]1[8H]1[8J][1H]8[4toYP][4toYP][4toYP][4toYP][4H][4H][4H][4J][4l][4L]4[4l]4[4J][4H]4[!%TOis][*TOis][!TOis][*TOis][!%H][*H][!H][*H][!%H][*D]![*H][!%][*J][!H]*[!%TOis][*TOis][!TOis][*TOis][!%H][*H][!H][*H][!%H][*D]![*H][!%][*J][!H]*[15tuoP][8tuoP][1tuoP][8tuoP][15H][8H][1H][8H][15H][8D]1[8H][15][8J][1H]8[14toYP][4toYP][4toYP][4toYP][14H][4H][4H][4J][14l][4L]4[4l][14][4J][4H]4[g!SH] [qg*SH] [qgWOSH] [tgWSH] [g!OSH] [qg*SH] [qWYSD] [tgWSH] [g!OSH] [qg*SH] [qWYSD] [tgWSH] [g!OSH] [qg*SH] [qgWPSHJ] [tgWSH] [1sfhl] [80sfh] [0wfhSL] [Ewsfh] [1sfhl] [80sfh] [0wsfhPJ] [Ewsfh] [4shODH] [WDqsh] [WDtsh] [YDtsh] [4hDZ] [WDqsh] [WDtsh] [YDtsh] [g!OSH] [qg*SH] [qgWSH] [tgWSH] [g!DHZ] [qg*SH] [qgWSH] [tgWSH] [g!OSH] [qg*SH] [qgWSH] [tgWSH] [g!OSH] [qg*SH] [qWYSD] [tgWSH] [1sfhl] [80sfh] [0wfhSL] [Ewsfh] [1sfhl] [80sfh] [0wsfhPJ] [Ewsfh] [4shODH] [%D4sh] [8sh%ODH] [D8qsh] [qetshODH]rtyuiopasdfgh-[sH]-[!*l]H[*g]S[Wqts]S[*g]H[!*J]g[*S]s[qtWZ]l[*H]g[18l]h[8f]s[0wEP]s[8f]h[18J]h[8f]s[0wEZ]l[8H]f[4l]H[4g]D[%8qs]D[4g]H[4J]H[4g]s[%8ql]H[4g]s[@J]G[@D]P[$^*g]D[@P]I[%g]D[%P]I[(Q8h]D[%P]o[!*Dsh][gH]*[Dsh][qtgWH] [*Dsh][gH][!*][Dsh][g*H] [WDqtsh][gH]* [18sgH][hJ]8[sgH][0whEJ] [8sgH][hJ][18][sgH][8hJ] [0wsgEH][hJ]8 [4hDJ][Hl]4[hDJ][%H8ql] [4hDJ][Hl]4[hDJ][H4l] [%8q] [O4ig] [@Hgc] @ [h$^*DZ] [h@DZ] [%Dsl] % [8(QPSJ] [s%OH] [!*gl]S[gl]S[*gl]S[gl]S[Wqtgl]S[gl]S[*gl]S[gl]S[!*J]g[*S]s[qtWZ]l[*H]g[18fl]s[fl]s[8fl]s[fl]s[E0wfl]s[fl]s[8fl]s[fl]s[18J]h[8f]s[0wEZ]l[8H]f[4gl]s[gl]s[4gl]s[gl]s[%8qgl]s[gl]s[4gl]s[gl]s[4J]H[4g]s[%8ql]H[4g]s[@J]G[@D]P[$^*g]D[@P]I[%g]D[%P]I[(Q8h]D[%P]o[!*Dh]s[g*H][Dh][Wqts][gH][*Dh]s[g!*H][Dh][*s][gH][WDqth]s[g*H]s[18gH]s[8hJ][gH][E0ws][hJ][8gH]s[18hJ][gH][8s][hJ][0wgEH]s[8hJ]s[4hJ]D[H4l][hJ][8q%D][Hl][4hJ]D[H4l][hJ][4D][Hl][%8q] [O4ig] [@Hgc] @ [h$^*DZ] [h@DZ] [%Dsl] % [8(QPSJ] [s%OH]----[1sk]8181818181818181[sj]81818181[kz]8181818[D7pk]7777777777777777[Dj]77777777[Djz]7777777[3adfhk]3333333333333333[fj]33333333[dk]3333333[5dgj]5555555[5sf]5555555[7sf]7777777[7dG]7777777[18dG]a[8fh][dG][0wra][fh][8dG]a[18fh][dG][8a][fh][0wrdG]a[8fh]a[7fh]a[G7j][fh][(Qea][Gj][7fh]a[G7j][fh][7a][Gj][(Qefh]a[G7j]a[G3j]d[3hk][Gj][570d][hk][G3j]d[3hk][Gj][3d][hk][570] [3uof] [2fhx] 2 [G468dz] [G2dz] [5adk] 5 [79qpsj] [5oah] [18fk]s[fk]s[8fk]s[fk]s[0wrfk]s[fk]s[8fk]s[fk]s[18j]f[8s]a[0wrz]k[8h]f[D7k]a[Dk]a[D7k]a[Dk]a[(QDek]a[Dk]a[D7k]a[Dk]a[7j]G[7D]a[(Qez]k[7h]D[3fk]a[fk]a[3fk]a[fk]a[570fk]a[fk]a[3fk]a[fk]a[3j]h[3f]a[570k]h[3f]a[2j]g[2d]p[468f]d[2p]i[5f]d[5p]i[79qG]d[5p]I[18dG]a[8fh][dG][0wra][fh][8dG]a[18fh][dG][8a][fh][0wrdG]a[8fh]a[7fh]a[G7j][fh][(Qea][Gj][7fh]a[G7j][fh][7a][Gj][(Qefh]a[G7j]a[G3j]d[3hk][Gj][570d][hk][G3j]d[3hk][Gj][3d][hk][570] [3uof] [2fhx] 2 [G468dz] [G2dz] [5adk] 5 [79qpsj] [5oah] [18ak] [0wr] [18ak] [0wr] [29pj] [Qet] [29pj] [Qetdz] [30ak] [wry] [30ak] [wry] [5pj] [wry] [5pj] [wrydz] [18ak] [0wr] [18ak] [0wr] [29uf] [Qetuf] [29uf] [etQIG] [30oh] [wruIG] [7uf] [wryud] [3uf]-xzlkjhgfdsapoiuytrewq0 [18uf] 8 [0wruf] 8 [18uf] [8yd][uf][0wr] [8oh] 7 [7uf] [(Qeoh] [7pj] [7PJ] [7pj] [(Qeoh] [7uf] [3oh] [3uf] [570] [3yd] [3uf] [3yd] [570] [3yd] 2 [2ra] [468yd] [2ra] [5yd] [5ra] [79qyd] [5uf] [18uf] 8 [0wruf] 8 [18uf] [8yd][uf][0wr] [8oh] 7 [7uf] [(Qeoh] [7pj] [7PJ] [7pj] [(Qeoh] [7uf] [3oh] [3uf] [570] [3yd] [3uf] [3yd] [570] [3oh] 2 [2uf] [468oh] [2pj] [5PJ] [5pj] [79qoh] [5uf] [3oh] [3uf][570yd] [3YD][570uoaf]")
