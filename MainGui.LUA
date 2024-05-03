@@ -65,4 +65,4 @@ loadstring(game:HttpGet(scriptUrl))()
     return Button
 end
 
-createButton("Anime Style", "later")
+createButton("Anime Style", "https://raw.githubusercontent.com/GazerHA/Gazer-Sheets-Library/main/Anime%20Gui")
