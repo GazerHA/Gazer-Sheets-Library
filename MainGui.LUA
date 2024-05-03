@@ -28,7 +28,7 @@ scrollingFrame.Parent = frame
 
 
 local label = Instance.new("TextLabel")
-label.Text = " GazerHA Sheets Library"
+label.Text = "  GazerHA Sheets Library"
 label.Size = UDim2.new(0, 100, 0, 20)
 label.Position = UDim2.new(0, 30, 0, 5)
 label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
