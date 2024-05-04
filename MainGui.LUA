@@ -66,3 +66,5 @@ loadstring(game:HttpGet(scriptUrl))()
 end
 
 createButton("Anime Style", "https://raw.githubusercontent.com/GazerHA/Gazer-Sheets-Library/main/Anime%20Gui")
+createButton("Classical", "https://raw.githubusercontent.com/GazerHA/Gazer-Sheets-Library/main/Classic%20Gui")
+createButton("Subscribe Gazer_HA", "")
