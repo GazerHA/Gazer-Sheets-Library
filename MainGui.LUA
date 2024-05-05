@@ -90,6 +90,8 @@ local function createButton(name, scriptUrl)
     Button.MouseButton1Click:Connect(function()
         loadstring(game:HttpGet(scriptUrl))()
         maingui:Destroy()
+        wait(0.1) 
+        frame.Size = UDim2.new(0, newSize, 0, newSize * 0.5)
     end)
     
     return Button
