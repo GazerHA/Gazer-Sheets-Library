@@ -115,3 +115,19 @@ createButton("Crossing Field", "[gc] [hv] [jb]-[2lcbm]--2 [69]-[2gc] 2 [6fhlx?]-
 
 createButton("Coming Soon..", "I Know. this is just a dumb script, but pls subs my channel gazer_ha on yt")
 
+-- Add a textbox to set the UI size
+local sizeTextbox = Instance.new("TextBox")
+sizeTextbox.Size = UDim2.new(0, 100, 0, 20)
+sizeTextbox.Position = UDim2.new(1, 5, 0, 5) -- Right of the frame
+sizeTextbox.Parent = frame
+sizeTextbox.PlaceholderText = "Set UI Size (300-500)"
+sizeTextbox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local newSize = tonumber(sizeTextbox.Text)
+        if newSize then
+            newSize = math.clamp(newSize, 300, 500) -- Clamp size between 300 and 500
+            frame.Size = UDim2.new(0, newSize, 0, newSize * 0.5) -- Example: Set both width and height to the same value
+        end
+    end
+end)
+
