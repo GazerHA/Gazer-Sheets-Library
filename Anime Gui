@@ -5,13 +5,13 @@ local UserInputService = game:GetService("UserInputService")
 local animegui = Instance.new("ScreenGui")
 animegui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
--- Define sizes
+local frameSize = UDim2.new(0, 200, 0, 100)
 local outerFrameSize = UDim2.new(0, 240, 0, 140)
 local scrollingFrameSize = UDim2.new(1, -10, 1, -30) -- slightly smaller than the frame
 
 -- Create the main frame
 local frame = Instance.new("Frame")
-
+frame.Size = frameSize
 frame.Position = UDim2.new(0.5, -frameSize.X.Offset / 2, 0.5, -frameSize.Y.Offset / 2)
 frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 frame.BorderSizePixel = 2
